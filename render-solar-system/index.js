@@ -1,44 +1,44 @@
-const solarSystem = document.getElementById("solarSystem");
+const solarSystem = document.getElementById('solarSystem');
 const planets = [
   {
-    name: "Mercury",
+    name: 'Mercury',
     diameter: 4879,
-    color: "grey",
+    color: 'grey',
   },
   {
-    name: "Venus",
+    name: 'Venus',
     diameter: 12104,
-    color: "yellow",
+    color: 'yellow',
   },
   {
-    name: "Earth",
+    name: 'Earth',
     diameter: 12742,
-    color: "green",
+    color: 'green',
   },
   {
-    name: "Mars",
+    name: 'Mars',
     diameter: 6779,
-    color: "pink",
+    color: 'pink',
   },
   {
-    name: "Jupiter",
+    name: 'Jupiter',
     diameter: 139822,
-    color: "yellow",
+    color: 'yellow',
   },
   {
-    name: "Saturn",
+    name: 'Saturn',
     diameter: 116464,
-    color: "orange",
+    color: 'orange',
   },
   {
-    name: "Uranus",
+    name: 'Uranus',
     diameter: 50724,
-    color: "grey",
+    color: 'grey',
   },
   {
-    name: "Neptune",
+    name: 'Neptune',
     diameter: 49244,
-    color: "blue",
+    color: 'blue',
   },
 ];
 
@@ -46,6 +46,18 @@ const planets = [
 // Write a function to render
 // the planets from the planets array using JavaScript.
 
-// Stretch goals:
-// - 1. Show planet facts on hover
-// - 2. Make one side of the planets dark (you can do this with one CSS property!)
+function renderPlanets() {
+  planets.forEach(planet => {
+    const planetDiv = document.createElement('div');
+    planetDiv.classList.add('planet');
+
+    // to render planets
+    planetDiv.style.background = `linear-gradient(90deg, ${planet.color}, #000)`;
+    planetDiv.style.width = `${planet.diameter / 15000}em`;
+    planetDiv.style.height = `${planet.diameter / 15000}em`;
+
+    solarSystem.appendChild(planetDiv);
+  });
+}
+
+renderPlanets();
