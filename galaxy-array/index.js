@@ -5,3 +5,6 @@
 // Stretch goals:
 // - 1. Ensure that the stars always fill each line
 // - 2. Add different sizes of star
+const stars = new Array(1015).fill('✨');
+const galaxy = document.getElementById('galaxy');
+galaxy.innerHTML = stars.join(' ');
