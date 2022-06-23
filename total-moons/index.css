@@ -24,3 +24,7 @@ body {
     font-size: 1.25em;
     text-transform: uppercase;
 }
+
+.bold {
+    font-weight: bold;
+}
